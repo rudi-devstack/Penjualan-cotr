@@ -9,105 +9,196 @@
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:Arial,sans-serif;background:#f0f2f5;padding:20px;min-height:100vh}
 .wrap{max-width:600px;margin:auto}
-.page-title{font-size:22px;font-weight:600;color:#1a1a2e;margin-bottom:4px;display:flex;align-items:center;gap:8px}
-.page-sub{font-size:14px;color:#6b7280;margin-bottom:20px}
-.section{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;margin-bottom:12px}
-.section-title{font-size:12px;font-weight:600;color:#6b7280;text-transform:uppercase;letter-spacing:.06em;margin-bottom:14px;display:flex;align-items:center;gap:6px}
-.prod-header{display:grid;grid-template-columns:1fr 100px 100px;gap:8px;margin-bottom:4px}
-.prod-header span{font-size:11px;color:#9ca3af;text-align:center}
-.prod-header span:first-child{text-align:left}
-.prod-row{display:grid;grid-template-columns:1fr 100px 100px;align-items:center;gap:8px;padding:8px 0;border-bottom:1px solid #f3f4f6}
+.page-title{font-size:20px;font-weight:600;color:#111827;margin-bottom:4px;display:flex;align-items:center;gap:8px}
+.page-sub{font-size:13px;color:#6b7280;margin-bottom:20px}
+.section{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;margin-bottom:10px}
+.sec-title{font-size:12px;font-weight:600;color:#6b7280;text-transform:uppercase;letter-spacing:.06em;margin-bottom:12px;display:flex;align-items:center;gap:6px}
+.col-header{display:grid;grid-template-columns:1fr 96px 96px;gap:8px;margin-bottom:4px}
+.col-header span{font-size:11px;color:#9ca3af;text-align:center}
+.col-header span:first-child{text-align:left}
+.prod-row{display:grid;grid-template-columns:1fr 96px 96px;align-items:center;gap:8px;padding:7px 0;border-bottom:1px solid #f3f4f6}
 .prod-row:last-child{border-bottom:none}
-.prod-name{font-size:14px;color:#111827;font-weight:500}
-.prod-price{font-size:12px;color:#9ca3af;margin-top:2px}
-input[type=number]{width:100%;padding:7px 8px;font-size:14px;border:1px solid #d1d5db;border-radius:8px;background:#f9fafb;color:#111827;text-align:center;transition:border .15s,box-shadow .15s}
+.pname{font-size:14px;font-weight:600;color:#111827}
+.pprice{font-size:12px;color:#9ca3af;margin-top:2px}
+input[type=number]{width:100%;padding:6px 8px;font-size:13px;border:1px solid #d1d5db;border-radius:8px;background:#f9fafb;color:#111827;text-align:center;transition:border .15s,box-shadow .15s}
 input[type=number]:focus{outline:none;border-color:#3b82f6;box-shadow:0 0 0 3px rgba(59,130,246,.15);background:#fff}
-.pay-row,.exp-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.full-field{display:flex;flex-direction:column}
-.full-field label{font-size:13px;color:#374151;margin-bottom:6px;font-weight:500}
-.full-field input{text-align:left}
-.calc-btn{width:100%;padding:13px;border:none;background:#2563eb;color:#fff;font-size:15px;font-weight:600;border-radius:10px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;transition:background .15s,transform .1s;margin-top:4px}
-.calc-btn:hover{background:#1d4ed8}
-.calc-btn:active{transform:scale(.98)}
-#hasil{margin-top:14px}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.field{display:flex;flex-direction:column;gap:5px}
+.field label{font-size:13px;color:#374151;font-weight:500}
+.field input{text-align:left}
+.btn{width:100%;padding:13px;border:none;background:#185FA5;color:#fff;font-size:15px;font-weight:600;border-radius:10px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:7px;margin-top:4px;transition:background .15s,transform .1s}
+.btn:hover{background:#1d4ed8}
+.btn:active{transform:scale(.98)}
+#hasil{margin-top:12px}
 .report{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px}
-.report-title{font-size:16px;font-weight:600;color:#111827;margin-bottom:14px;display:flex;align-items:center;gap:8px}
-.prod-item{display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid #f3f4f6;font-size:13px}
+.rtitle{font-size:15px;font-weight:600;color:#111827;margin-bottom:14px;display:flex;align-items:center;gap:7px}
+.prod-item{display:flex;justify-content:space-between;font-size:13px;padding:6px 0;border-bottom:1px solid #f3f4f6}
 .prod-item:last-child{border-bottom:none}
-.prod-item .name{color:#6b7280}
-.prod-item .val{color:#111827;font-weight:500}
-.metrics{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:14px 0}
-.metric{background:#f9fafb;border-radius:8px;padding:12px 14px}
-.metric .mlabel{font-size:12px;color:#6b7280;margin-bottom:4px}
-.metric .mval{font-size:18px;font-weight:600;color:#111827}
-.selisih-row{display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:#f9fafb;border-radius:8px;font-size:13px;margin-bottom:14px}
-.selisih-row .slabel{color:#6b7280}
-.selisih-ok{color:#16a34a;font-weight:600}
-.selisih-warn{color:#dc2626;font-weight:600}
-.exp-report{margin-bottom:14px}
-.exp-item{display:flex;justify-content:space-between;font-size:13px;padding:6px 0;border-bottom:1px solid #f3f4f6}
-.exp-item:last-child{border-bottom:none}
-.exp-item .elabel{color:#6b7280}
-.exp-item .eval{color:#dc2626;font-weight:500}
-.bersih-box{background:#eff6ff;border-radius:10px;padding:14px 18px;display:flex;justify-content:space-between;align-items:center}
-.bersih-label{font-size:14px;color:#1d4ed8;font-weight:600;display:flex;align-items:center;gap:6px}
-.bersih-val{font-size:22px;font-weight:700;color:#1d4ed8}
+.pi-name{color:#6b7280}
+.pi-val{font-weight:600;color:#111827}
+.metrics{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:12px 0}
+.metric{background:#f9fafb;border-radius:8px;padding:10px 12px}
+.mlabel{font-size:12px;color:#6b7280;margin-bottom:3px}
+.mval{font-size:17px;font-weight:600;color:#111827}
+.divider{border:none;border-top:1px solid #f3f4f6;margin:10px 0}
+.row-line{display:flex;justify-content:space-between;font-size:13px;padding:5px 0}
+.rl-label{color:#6b7280}
+.rl-val{font-weight:500;color:#111827}
+.rl-plus{font-weight:500;color:#16a34a}
+.result-box{border-radius:10px;padding:14px 16px;display:flex;justify-content:space-between;align-items:center;margin-top:12px}
+.result-ok{background:#dcfce7}
+.result-warn{background:#fee2e2}
+.rlabel{font-size:14px;font-weight:600;display:flex;align-items:center;gap:7px}
+.rlabel-ok{color:#15803d}
+.rlabel-warn{color:#b91c1c}
+.rval{font-size:22px;font-weight:700}
+.rval-ok{color:#15803d}
+.rval-warn{color:#b91c1c}
+.formula-note{font-size:12px;color:#9ca3af;margin-top:8px;text-align:center}.invalid{border:2px solid #ef4444 !important;background:#fef2f2 !important}
 </style>
 </head>
 <body>
 <div class="wrap">
-  <p class="page-title">&#128202; Kalkulator penjualan COTR</p>
-  <p class="page-sub">Catat stok awal, sisa, dan pembayaran untuk menghitung laporan harian.</p>
+  <p class="page-title"><i class="ti ti-chart-bar" aria-hidden="true"></i> Kalkulator penjualan COTR</p>
+  <p class="page-sub">Cek selisih antara penjualan produk dan uang yang diterima.</p>
 
   <div class="section">
-    <p class="section-title">&#128230; Produk</p>
-    <div class="prod-header"><span>Nama produk</span><span>Awal</span><span>Sisa</span></div>
+    <p class="sec-title"><i class="ti ti-package" aria-hidden="true"></i> Stok produk</p>
+    <div class="col-header"><span>Produk</span><span>Awal</span><span>Sisa</span></div>
     <div class="prod-row">
-      <div><div class="prod-name">Premium Kaleng</div><div class="prod-price">Rp23.000</div></div>
+      <div><div class="pname">Premium Kaleng</div><div class="pprice">Rp23.000</div></div>
       <input type="number" id="pk_awal" placeholder="0" min="0">
       <input type="number" id="pk_sisa" placeholder="0" min="0">
     </div>
     <div class="prod-row">
-      <div><div class="prod-name">Chocolate</div><div class="prod-price">Rp25.000</div></div>
+      <div><div class="pname">Chocolate</div><div class="pprice">Rp25.000</div></div>
       <input type="number" id="ch_awal" placeholder="0" min="0">
       <input type="number" id="ch_sisa" placeholder="0" min="0">
     </div>
     <div class="prod-row">
-      <div><div class="prod-name">Vanila</div><div class="prod-price">Rp25.000</div></div>
+      <div><div class="pname">Vanila</div><div class="pprice">Rp25.000</div></div>
       <input type="number" id="vn_awal" placeholder="0" min="0">
       <input type="number" id="vn_sisa" placeholder="0" min="0">
     </div>
     <div class="prod-row">
-      <div><div class="prod-name">Matcha</div><div class="prod-price">Rp18.000</div></div>
+      <div><div class="pname">Matcha</div><div class="pprice">Rp18.000</div></div>
       <input type="number" id="mt_awal" placeholder="0" min="0">
       <input type="number" id="mt_sisa" placeholder="0" min="0">
     </div>
     <div class="prod-row">
-      <div><div class="prod-name">Premium Cup</div><div class="prod-price">Rp15.000</div></div>
+      <div><div class="pname">Premium Cup</div><div class="pprice">Rp15.000</div></div>
       <input type="number" id="cp_awal" placeholder="0" min="0">
       <input type="number" id="cp_sisa" placeholder="0" min="0">
     </div>
   </div>
 
   <div class="section">
-    <p class="section-title">&#128179; Pembayaran</p>
-    <div class="pay-row">
-      <div class="full-field"><label>QRIS</label><input type="number" id="qris" placeholder="0" min="0"></div>
-      <div class="full-field"><label>Cash</label><input type="number" id="cash" placeholder="0" min="0"></div>
+    <p class="sec-title"><i class="ti ti-credit-card" aria-hidden="true"></i> Pembayaran diterima</p>
+    <div class="two-col">
+      <div class="field"><label>QRIS</label><input type="number" id="qris" placeholder="0" min="0"></div>
+      <div class="field"><label>Cash</label><input type="number" id="cash" placeholder="0" min="0"></div>
     </div>
   </div>
 
   <div class="section">
-    <p class="section-title">&#129534; Pengeluaran</p>
-    <div class="exp-row">
-      <div class="full-field"><label>Bayar tempat</label><input type="number" id="bayar_tempat" placeholder="0" min="0"></div>
-      <div class="full-field"><label>Pengeluaran lain</label><input type="number" id="pengeluaran_lain" placeholder="0" min="0"></div>
+    <p class="sec-title"><i class="ti ti-receipt" aria-hidden="true"></i> Pengeluaran</p>
+    <div class="two-col">
+      <div class="field"><label>Bayar tempat</label><input type="number" id="bayar_tempat" placeholder="0" min="0"></div>
+      <div class="field"><label>Pengeluaran lain</label><input type="number" id="pengeluaran_lain" placeholder="0" min="0"></div>
     </div>
   </div>
 
-  <button class="calc-btn" onclick="hitung()">&#128290; Hitung penjualan</button>
-
+  <button class="btn" onclick="hitung()"><i class="ti ti-calculator" aria-hidden="true"></i> Hitung</button><button class="btn" onclick="resetForm()" style="margin-top:8px;background:#6b7280"><i class="ti ti-refresh"></i> Reset</button>
   <div id="hasil"></div>
+</div>
+
+
+<script>
+function g(id){return Number(document.getElementById(id).value||0)}
+function rp(n){return"Rp"+Math.round(n).toLocaleString("id-ID")}
+
+function resetForm(){
+ document.querySelectorAll("input").forEach(i=>{
+   i.value="";
+   i.classList.remove("invalid");
+ });
+ document.getElementById("hasil").innerHTML="";
+ localStorage.clear();
+}
+
+document.querySelectorAll("input").forEach(inp=>{
+ const saved=localStorage.getItem(inp.id);
+ if(saved!==null) inp.value=saved;
+ inp.addEventListener("input",()=>localStorage.setItem(inp.id,inp.value));
+});
+
+function hitung(){
+  document.querySelectorAll("input").forEach(i=>i.classList.remove("invalid"));
+
+  const produk=[
+    ["Premium Kaleng","pk_awal","pk_sisa"],
+    ["Chocolate","ch_awal","ch_sisa"],
+    ["Vanila","vn_awal","vn_sisa"],
+    ["Matcha","mt_awal","mt_sisa"],
+    ["Premium Cup","cp_awal","cp_sisa"]
+  ];
+
+  for(const p of produk){
+    const awal=g(p[1]), sisa=g(p[2]);
+    if(sisa>awal){
+      document.getElementById(p[2]).classList.add("invalid");
+      alert("Input tidak valid! Stok sisa "+p[0]+" tidak boleh lebih besar dari stok awal.");
+      return;
+    }
+  }
+
+  const pkQ=g("pk_awal")-g("pk_sisa"),chQ=g("ch_awal")-g("ch_sisa"),
+        vnQ=g("vn_awal")-g("vn_sisa"),mtQ=g("mt_awal")-g("mt_sisa"),
+        cpQ=g("cp_awal")-g("cp_sisa");
+
+  const pk=pkQ*23000,ch=chQ*25000,vn=vnQ*25000,mt=mtQ*18000,cp=cpQ*15000;
+  const totalPenjualan=pk+ch+vn+mt+cp;
+
+  const qris=g("qris"),cash=g("cash"),totalPembayaran=qris+cash;
+  const bayarTempat=g("bayar_tempat"),pengeluaranLain=g("pengeluaran_lain");
+  const totalPengeluaran=bayarTempat+pengeluaranLain;
+  const selisih=totalPembayaran+totalPengeluaran-totalPenjualan;
+
+  let warning="";
+  if(totalPenjualan>0 && totalPembayaran<totalPenjualan*0.3){
+    warning='<div style="margin:10px 0;padding:10px;background:#fef3c7;border-radius:8px">⚠ Periksa kembali data pembayaran atau stok. Selisih terlihat tidak wajar.</div>';
+  }
+
+  const isOk=selisih>=0;
+  const items=[
+    {name:"Premium Kaleng — "+pkQ+" pcs",val:pk},
+    {name:"Chocolate — "+chQ+" pcs",val:ch},
+    {name:"Vanila — "+vnQ+" pcs",val:vn},
+    {name:"Matcha — "+mtQ+" pcs",val:mt},
+    {name:"Premium Cup — "+cpQ+" pcs",val:cp},
+  ];
+
+  document.getElementById("hasil").innerHTML=`
+  <div class="report">
+    <p class="rtitle">Laporan penjualan</p>
+    ${warning}
+    <div>${items.map(i=>`<div class="prod-item"><span class="pi-name">${i.name}</span><span class="pi-val">${rp(i.val)}</span></div>`).join("")}</div>
+    <div class="metrics">
+      <div class="metric"><div class="mlabel">Total penjualan</div><div class="mval">${rp(totalPenjualan)}</div></div>
+      <div class="metric"><div class="mlabel">Total pembayaran</div><div class="mval">${rp(totalPembayaran)}</div></div>
+    </div>
+    <div class="row-line"><span class="rl-label">Bayar tempat</span><span class="rl-plus">+ ${rp(bayarTempat)}</span></div>
+    <div class="row-line"><span class="rl-label">Pengeluaran lain</span><span class="rl-plus">+ ${rp(pengeluaranLain)}</span></div>
+    <div class="result-box ${isOk?'result-ok':'result-warn'}">
+      <span>${isOk?'Selisih':'Minus'}</span>
+      <span>${isOk?'':'-'}${rp(Math.abs(selisih))}</span>
+    </div>
+  </div>`;
+}
+</script>
+
+</body>
+  </html>  <div id="hasil"></div>
 </div>
 
 <script>
